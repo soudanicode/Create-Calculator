@@ -1,32 +1,78 @@
-:root{
-    --main-color: ;
-    --second-color:;
-}
 *{
     box-sizing: border-box;
     margin: 0px;    
     padding: 0px;   
-};
+}
 body{
     width: 100%;
     height: 100vh;
-    text-align: center;
-
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: sans-serif !important;
 }
 .container{
-    max-width: 350px;
-    background-color: antiquewhite;
+    width: fit-content;
+    background-color: #666;
     margin: 0px auto;
     padding: 15px;
-};
-.display{
-    width: 100%;
-    outline: none;
-    height: 30px;
-    border-radius: 4px;
-    box-shadow: 0px 0px 4px inset;
-    border:none;
+    padding-top: 20px;
+    box-shadow: -1px 1px 4px #d8d8d8 inset;    
+    border-radius:10px
 }
-.buttons{}
+.display{
+    width: 300px;
+    outline: none;
+    background-color: darkgrey;
+    height: 50px;
+    border-radius: 4px;
+    box-shadow: -1px 1px 20px 0px #ffffff78 inset, 1px -1px 20px 0px #ffffff78 inset;
+    border:none;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+.buttons{
+    /* padding: 3px; */
+    display: grid;
+    grid-template-columns: repeat(4,63.75px);
+    grid-auto-rows: 40px;
+    gap:15px;
+}
+.buttons button{
+    /* aspect-ratio: 1; */
+    box-shadow: 0px 18px 59px #61667163 inset;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.buttons button:hover{
+    filter: invert(2);
+    transition: .3 ease-in-out;
+}
+.buttons > .clear{
+    grid-column: span 2;
+    /* background-color: burlywood; */
+    /* توسيع عرض المربع ليشمل خانتين */
+}
+.buttons > .del{
+    background-color: rgba(241, 2, 2, 0.878);
+    /* توسيع عرض المربع ليشمل خانتين */
+}
+.buttons > .equal{
+    background-color: aquamarine !important;
+}
+.buttons > .operats,.clear{
+    background-color: burlywood;
+}
+.result_sc{
+    box-shadow:-1px 1px 20px 25px rgba(129, 231, 197, 0.702) inset !important;
+}
 
 
